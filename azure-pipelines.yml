@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- gradle-calculator
 
 pool:
   vmImage: 'ubuntu-latest'
