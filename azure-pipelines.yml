@@ -10,3 +10,12 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- task: Gradle@2
+  displayName: validate
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    tasks: 'validate'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: false
